@@ -79,7 +79,6 @@ body {
 #menu {
     color: aliceblue;
     display: flex;
-    border: 5px solid black;
     padding: 5%;
     margin: 5%;
     flex-direction: column;
@@ -94,14 +93,48 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     justify-items: center;
+    gap: 40px;
+}
+
+.foods > div {
+    position: relative;
 }
 
 .foods > div > img {
     height: 300px;
-    position: relative;
+    border-radius: 7px;
 }
 
 .foods > div > p {
     position: absolute;
-    top: 5px;
+    height: 30%;
+    bottom: -100px;
+    width: 436px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    padding: 7px;
+    opacity: 0;
+}
+
+.foods > div > img:hover ~ p {
+    transition: 0.4s ease all;
+    transform: translateY(-89px);
+    opacity: 1;
+}
+
+#contact {
+    display: flex;
+    height: 73vh;
+    width: 100%;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#contact > div {
+    justify-self: center;
 }

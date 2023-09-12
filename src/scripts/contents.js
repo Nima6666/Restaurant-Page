@@ -29,6 +29,13 @@ const contentCre = (() => {
     const contact = (id) => {
         const contact = document.getElementById(id);
         contact.textContent="";
+        const h1 = document.createElement('h1');
+        h1.textContent = "Reach us at";
+        const divCon = document.createElement('div');
+        divCon.classList.add('contacts');
+        divCon.innerHTML = '<div>Phone Number: +9771234567890</div> <div>Address: 123 Galli</div> <div>Email: sm1@earth.com</div>';
+        contact.appendChild(h1);
+        contact.appendChild(divCon);
     }
 
     const menu = (id) => {
@@ -41,11 +48,11 @@ const contentCre = (() => {
         foods.setAttribute('style', 'backdrop-filter: blur(2px);');
         foods.classList.add('foods');
         const momoItem = foo(momo);
-        momoItem.appendChild(createParagraph(`delicious momo`));
+        momoItem.appendChild(createParagraph(`Delicious momo`));
         const chowmeinItem = foo(chowmein);
-        chowmeinItem.appendChild(createParagraph(`delicious chowmein`));
+        chowmeinItem.appendChild(createParagraph(`Delicious chowmein`));
         const chickenItem = foo(chickenRice);
-        chickenItem.appendChild(createParagraph(`delicious Chicken Rice Curry`));
+        chickenItem.appendChild(createParagraph(`Delicious Chicken Rice Curry`));
         const foodsArr = [momoItem, chowmeinItem, chickenItem];
         
         for (let i=0; i < foodsArr.length; i++)  {
