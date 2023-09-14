@@ -24,13 +24,8 @@ const renderContent = (() => {
     };
 
     const check = (a) => {
-        // console.log(contentpage.id);
-        console.log(a.classList.value);
 
         const todeac = document.querySelector(`.${contentpage.id}`);
-        // console.log(todeac);
-
-        //if (contentpage.id == a.classList.value)
 
     }
 
